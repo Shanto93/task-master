@@ -18,7 +18,7 @@ const AddTaskForm = ({ setIsOpen }) => {
   };
 
   const onSubmit = (data) => {
-    console.log(data);
+    // console.log(data);
     dispatch(addTask(data));
     onCancel();
   };
@@ -57,20 +57,20 @@ const AddTaskForm = ({ setIsOpen }) => {
         <input
           className="rounded-md mt-2"
           type="date"
-          {...register("deadline")}
+          {...register("date")}
         />
       </div>
-      {errors.deadline && <span>Deadline is required</span>}
+      {errors.date && <span>Deadline is required</span>}
 
       {/* Assign To */}
       <div className="flex flex-col">
         <label className="font-semibold">Assign To</label>
-        <select {...register("assign")} className="rounded-md mt-2">
+        <select {...register("assignedTo")} className="rounded-md mt-2">
           <option value="shanta">Shanta</option>
           <option value="rabbi">Rabbi</option>
         </select>
       </div>
-      {errors.assign && <span>Make sure to assign this to someone.</span>}
+      {errors.assignedTo && <span>Make sure to assign this to someone.</span>}
 
       {/* Priority */}
       <div className="flex flex-col">
