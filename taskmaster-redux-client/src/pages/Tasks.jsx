@@ -13,6 +13,7 @@ const Tasks = () => {
   const pendingTasks = tasks.filter((task) => task.status === "pending");
   const runningTasks = tasks.filter((task) => task.status === "running");
   const completeTasks = tasks.filter((task) => task.status === "completed");
+  const myTasks = tasks.filter((task) => task.assignedTo == "shanta islam");
 
   return (
     <div className="h-screen grid grid-cols-12">
@@ -129,7 +130,7 @@ const Tasks = () => {
             </div>
           </div>
         </div>
-        <MyTasks />
+        <MyTasks myTasks={myTasks} />
       </div>
     </div>
   );

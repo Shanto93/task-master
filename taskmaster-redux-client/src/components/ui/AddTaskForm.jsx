@@ -54,11 +54,7 @@ const AddTaskForm = ({ setIsOpen }) => {
       {/* Deadline */}
       <div className="flex flex-col">
         <label className="font-semibold">Deadline</label>
-        <input
-          className="rounded-md mt-2"
-          type="date"
-          {...register("date")}
-        />
+        <input className="rounded-md mt-2" type="date" {...register("date")} />
       </div>
       {errors.date && <span>Deadline is required</span>}
 
@@ -66,8 +62,10 @@ const AddTaskForm = ({ setIsOpen }) => {
       <div className="flex flex-col">
         <label className="font-semibold">Assign To</label>
         <select {...register("assignedTo")} className="rounded-md mt-2">
-          <option value="shanta">Shanta</option>
+          <option value="shanta islam">Shanta Islam</option>
           <option value="rabbi">Rabbi</option>
+          <option value="adith">Adith</option>
+          <option value="tahim">Tahim</option>
         </select>
       </div>
       {errors.assignedTo && <span>Make sure to assign this to someone.</span>}
