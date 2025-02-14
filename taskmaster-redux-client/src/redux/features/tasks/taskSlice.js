@@ -29,6 +29,7 @@ export const taskSlice = createSlice({
       const targetTask = state.tasks.find((task) => task.id === payload.id);
       targetTask.status = payload.status;
     },
+    
   },
 });
 

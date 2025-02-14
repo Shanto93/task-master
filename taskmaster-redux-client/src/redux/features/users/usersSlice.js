@@ -1,8 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  name: "Shanta Islam",
-  email: "shantoislam7363@gmail.com",
+  name: "shanta islam",
+  email: "shanto@gmail.com",
 };
 
 export const userSlice = createSlice({
@@ -11,5 +11,6 @@ export const userSlice = createSlice({
   reducers: {},
 });
 
-export const {} = userSlice.actions;
+export const { increment, decrement, incrementByAmount } = userSlice.actions;
+
 export default userSlice.reducer;

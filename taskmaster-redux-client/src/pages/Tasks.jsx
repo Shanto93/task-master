@@ -9,11 +9,12 @@ import { useSelector } from "react-redux";
 const Tasks = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { tasks } = useSelector((state) => state.taskSlice);
+  const { name } = useSelector((state) => state.userSlice);
 
   const pendingTasks = tasks.filter((task) => task.status === "pending");
   const runningTasks = tasks.filter((task) => task.status === "running");
   const completeTasks = tasks.filter((task) => task.status === "completed");
-  const myTasks = tasks.filter((task) => task.assignedTo == "shanta islam");
+  const myTasks = tasks.filter((task) => task.assignedTo === name);
 
   return (
     <div className="h-screen grid grid-cols-12">
